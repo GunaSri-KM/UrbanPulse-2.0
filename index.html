@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UrbanPulse 2.0</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">UP</div>
+
+        <div>
+          <h2>UrbanPulse</h2>
+          <span>2.0 Dashboard</span>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-item active">▦ <span>Overview</span></button>
+        <button class="nav-item">☀ <span>Weather</span></button>
+        <button class="nav-item">🚦 <span>Traffic</span></button>
+        <button class="nav-item">⚡ <span>Resources</span></button>
+      </nav>
+
+      <div class="system">
+        <span></span>
+        Live System
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p id="date">Loading date...</p>
+
+          <h1>Good Day 👋</h1>
+
+          <p class="subtitle">Your city information at a glance.</p>
+        </div>
+
+        <div class="top-right">
+          <button id="refreshBtn" class="refresh">↻ Refresh</button>
+
+          <div class="location">
+            <span>📍</span>
+
+            <div>
+              <strong id="city">Detecting...</strong>
+              <small>Current location</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="time-card">
+        <div>
+          <p>LOCAL TIME</p>
+          <h2 id="clock">--:--:--</h2>
+        </div>
+
+        <div class="today">
+          <span id="day">Loading...</span>
+          <small id="fullDate">Loading...</small>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="card">
+          <div class="card-head">
+            <span>🌤️</span>
+            <small>Temperature</small>
+          </div>
+
+          <h2 id="temperature">--°C</h2>
+
+          <p id="condition">Loading weather...</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span>💧</span>
+            <small>Humidity</small>
+          </div>
+
+          <h2 id="humidity">--%</h2>
+
+          <p>Current humidity</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span>🌬️</span>
+            <small>Wind Speed</small>
+          </div>
+
+          <h2 id="wind">-- km/h</h2>
+
+          <p>Current wind</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span>🌡️</span>
+            <small>Feels Like</small>
+          </div>
+
+          <h2 id="feels">--°C</h2>
+
+          <p>Apparent temperature</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h2>5-Day Forecast</h2>
+              <p>Upcoming weather conditions</p>
+            </div>
+
+            <span class="live">● LIVE</span>
+          </div>
+
+          <div id="forecast" class="forecast">
+            <div class="loading">Loading forecast...</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h2>City Insights</h2>
+              <p>Current dashboard status</p>
+            </div>
+          </div>
+
+          <div class="insight">
+            <span>🟢</span>
+            <div>
+              <strong>Weather Service</strong>
+              <p id="weatherStatus">Connecting...</p>
+            </div>
+          </div>
+
+          <div class="insight">
+            <span>📍</span>
+            <div>
+              <strong>Location</strong>
+              <p id="locationStatus">Detecting...</p>
+            </div>
+          </div>
+
+          <div class="insight">
+            <span>🕐</span>
+            <div>
+              <strong>Time Service</strong>
+              <p>Automatically updating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel activity">
+        <div class="panel-title">
+          <div>
+            <h2>Smart City Activity</h2>
+            <p>Simulated urban sensor readings</p>
+          </div>
+
+          <span class="live">● LIVE DATA</span>
+        </div>
+
+        <div class="activity-grid">
+          <div class="activity-card">
+            <div class="activity-top">
+              <span>⚡ Energy</span>
+              <strong>--%</strong>
+            </div>
+
+            <div class="bar">
+              <div></div>
+            </div>
+
+            <small>Current energy usage</small>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-top">
+              <span>💧 Water</span>
+              <strong>--%</strong>
+            </div>
+
+            <div class="bar">
+              <div></div>
+            </div>
+
+            <small>Current water usage</small>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-top">
+              <span>♻ Waste</span>
+              <strong>--%</strong>
+            </div>
+
+            <div class="bar">
+              <div></div>
+            </div>
+
+            <small>Collection progress</small>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-top">
+              <span>🚲 Mobility</span>
+              <strong>--%</strong>
+            </div>
+
+            <div class="bar">
+              <div></div>
+            </div>
+
+            <small>Traffic & mobility level</small>
+          </div>
+        </div>
+
+        <div class="city-status">
+          <div>
+            <span class="status-dot"></span>
+            <strong>City Status</strong>
+          </div>
+
+          <span class="status-text"> Monitoring Active </span>
+        </div>
+      </section>
+
+      <footer>UrbanPulse 2.0 • Smart City Dashboard</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
